@@ -14,7 +14,7 @@ body {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background:rgb(255, 50, 50);
+    background:rgb(255, 50, 50);  /* 255, 50, 50 */
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -79,9 +79,9 @@ body {
     padding-bottom:10vh;
 }
 #middle h1 {
-    color:rgb(255, 50, 50);
-    font-size:70px;
-    text-decoration:underline;
+    color:rgb(255, 255, 255);
+    font-size:50px;
+    /*text-decoration:underline;*/
 }
 #about {
     width:10vw;
