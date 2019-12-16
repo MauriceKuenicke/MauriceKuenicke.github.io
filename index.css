@@ -63,7 +63,7 @@ body {
     margin:0px 6%;
     font-size:19px;
     color:#fff;
-    text-decoration:underline;
+    /*text-decoration:underline;*/
 }
 #middle {
     width:100vw;
@@ -206,7 +206,7 @@ body {
 }
 .container h1 {
     font-size:60px;
-    text-decoration:underline;
+    /*text-decoration:underline;*/
 }
 .container p {
     font-size:21px;
