@@ -1,3 +1,11 @@
+new fullpage('#fullpage', {
+    autoScrolling: true,
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips: ['Home', 'About Me', 'My Projects', 'My Blog'],
+    anchors: ['Home', 'AboutMe', 'MyProjects', 'MyBlog'],
+})
+
 const TypeWriter = function (txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
     this.words = words;

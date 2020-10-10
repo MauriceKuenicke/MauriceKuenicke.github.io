@@ -4,76 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>mkuenicke</title>
+    <link rel="stylesheet" href="./fullpage.min.css" />
     <link rel="stylesheet" href="./style.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Sansita+Swashed:wght@500&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 </head>
 
 <body>
-    <div class="intro">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-            crossorigin="anonymous"></script>
-        <script src="./app.js" />
-        </script>
-        <div class="vanta">
-            <script src="three.r119.min.js"></script>
-            <script src="vanta.rings.min.js"></script>
-        </div>
-        <script>
-            VANTA.RINGS({
-                el: ".vanta",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                backgroundColor: 0x0,
-                color: 0xffa400
-            })
-        </script>
+    <div id="fullpage">
 
-        <div class="intro-text">
-            <h1>Maurice Künicke,
-                <span class="txt-type" data-wait="500"
-                    data-words='["Physicist", "Data Scientist", "Software Developer"]'></span>
-            </h1>
-            <h2>Welcome To My Website<br>(Under Construction)</h2>
-        </div>
-        <button class="btn" id="btn1">My Projects</button>
-        <button class="btn" id="btn2">About me</button>
-        <button class="btn" id="btn3">Blog</button>
-
-
-        <div class="sidebar">
-            <div class="social-links">
-                <a href="https://github.com/MauriceKuenicke" target="_blank">
-                    <img src="images/GitHub-Mark-Light-32px.png"></a>
-                <a href="https://www.linkedin.com/in/maurice-k%C3%BCnicke-429a211a3/" target="_blank">
-                    <img src="images/linkedin.png"></a>
+        <section class="section s1">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+                integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+                crossorigin="anonymous"></script>
+            </script>
+            <div class="vanta">
+                <script src="three.r119.min.js"></script>
+                <script src="vanta.rings.min.js"></script>
             </div>
-
-
-            <div class="useful-links">
-                <img src="images/info.png">
-                <img src="images/share.png">
+            <script>
+                VANTA.RINGS({
+                    el: ".vanta",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00,
+                    backgroundColor: 0x0,
+                    color: 0xffa400
+                })
+            </script>
+            <div class="intro-text">
+                <h1>Maurice Künicke,
+                    <span class="txt-type" data-wait="500"
+                        data-words='["Physicist", "Data Scientist", "Software Developer"]'></span>
+                </h1>
+                <h2>Welcome To My Website<br>(Under Construction)</h2>
             </div>
-        </div>
+            <a href="#AboutMe" class="btn" id="btn1">About Me</a>
+            <a href="#MyProjects" class="btn" id="btn2">My Projects</a>
+            <a href="#MyBlog" class="btn" id="btn3">Blog</a>
+
+            <div class="sidebar">
+                <div class="social-links">
+                    <a href="https://github.com/MauriceKuenicke" target="_blank">
+                        <img src="images/GitHub-Mark-Light-32px.png"></a>
+                    <a href="https://www.linkedin.com/in/maurice-k%C3%BCnicke-429a211a3/" target="_blank">
+                        <img src="images/linkedin.png"></a>
+                </div>
+                <div class="useful-links">
+                    <img src="images/info.png">
+                    <img src="images/share.png">
+                </div>
+        </section>
+
+        <section class="section s2">
+            <h1> About Me</h1>
+            <div class="sidebar">
+                <div class="social-links">
+                    <a href="https://github.com/MauriceKuenicke" target="_blank">
+                        <img src="images/GitHub-Mark-Light-32px.png"></a>
+                    <a href="https://www.linkedin.com/in/maurice-k%C3%BCnicke-429a211a3/" target="_blank">
+                        <img src="images/linkedin.png"></a>
+                </div>
+                <div class="useful-links">
+                    <img src="images/info.png">
+                    <img src="images/share.png">
+                </div>
+        </section>
+
+        <section class="section s3">
+            <h1> Projects Overview</h1>
+
+
+
+
+            <div class="sidebar">
+                <div class="social-links">
+                    <a href="https://github.com/MauriceKuenicke" target="_blank">
+                        <img src="images/GitHub-Mark-Light-32px.png"></a>
+                    <a href="https://www.linkedin.com/in/maurice-k%C3%BCnicke-429a211a3/" target="_blank">
+                        <img src="images/linkedin.png"></a>
+                </div>
+                <div class="useful-links">
+                    <img src="images/info.png">
+                    <img src="images/share.png">
+                </div>
+        </section>
+        <section class="section s4">
+            <h1>My Blog</h1>
+            <div class="sidebar">
+                <div class="social-links">
+                    <a href="https://github.com/MauriceKuenicke" target="_blank">
+                        <img src="images/GitHub-Mark-Light-32px.png"></a>
+                    <a href="https://www.linkedin.com/in/maurice-k%C3%BCnicke-429a211a3/" target="_blank">
+                        <img src="images/linkedin.png"></a>
+                </div>
+                <div class="useful-links">
+                    <img src="images/info.png">
+                    <img src="images/share.png">
+                </div>
+        </section>
     </div>
+    <script src="./fullpage.min.js"></script>
+    <script src="./app.js"></script>
 </body>
-
-
-
-
-
-
-
-
 
 
 </html>
