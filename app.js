@@ -4,6 +4,12 @@ new fullpage('#fullpage', {
     navigationPosition: 'right',
     navigationTooltips: ['Home', 'About Me', 'My Projects', 'My Blog'],
     anchors: ['Home', 'AboutMe', 'MyProjects', 'MyBlog'],
+    onLeave: (origin, destination, direction) => {
+        const section = destination.item;
+        const tl = new TimelineMax({ delay: 0.5 });
+        const title = section.querySelector(".about_text p");
+        tl.fromTo(title, 0.6, { y: "50", opacity: 0 }, { y: 0, opacity: 1 });
+    }
 })
 
 const TypeWriter = function (txtElement, words, wait = 3000) {
@@ -66,4 +72,64 @@ function init() {
     const wait = txtElement.getAttribute('data-wait');
     //Init TypeWriter
     new TypeWriter(txtElement, words, wait);
+}
+
+function toggle(d) {
+    var blur = document.getElementById("blur");
+    blur.classList.toggle('active');
+    var popup = document.getElementById("popup");
+    if (popup.classList.contains("active")) {
+        popup.classList.toggle('active');
+    }
+    else {
+        popup.innerHTML = get_popup_data(d.getAttribute("data-id"));
+        popup.classList.toggle('active');
+    }
+}
+
+//document.body.addEventListener('click', blur_off, true);
+//function blur_off() {
+//    var popup = document.getElementById("popup");
+//    var blur = document.getElementById("blur");
+//    if (popup.classList.contains('active')) {
+//        popup.classList.toggle('active');
+//        blur.classList.toggle('active');
+//    }
+//}
+
+function get_popup_data(dataid) {
+
+    if (dataid == "popup_11") {
+        var src_link = `https://github.com/`;
+        var imgsrc = "images/java.png";
+        var header = "This is the Java Tile";
+        var content = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
+    molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
+    beatae illo repellendus maxime dicta atque aperiam?`;
+    }
+    else if (dataid == "popup_12") {
+        var src_link = `https://github.com/`;
+        var imgsrc = "images/heic1501a.jpg";
+        var header = "Here are the Pillars";
+        var content = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
+    molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
+    beatae illo repellendus maxime dicta atque aperiam?`;
+    }
+    else {
+        var src_link = `https://github.com/`;
+        var imgsrc = "images/kappa.png";
+        var header = "Something went wrong here... " + dataid;
+        var content = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
+    molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
+    beatae illo repellendus maxime dicta atque aperiam?`;
+    }
+
+
+    var data = `<h2>${header}</h2>
+    <div><img src=${imgsrc} style="max-width: 100%; margin-top:10px"></div>
+    <p>${content}</p>
+    <a href="#" onclick="toggle(this)">Close</a>
+    <a href=${src_link} target="_blank">View Code <img src="images/src.png" height=13px
+            style="filter: invert(1);"></a>`;
+    return data;
 }

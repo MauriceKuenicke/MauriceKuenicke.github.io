@@ -66,6 +66,31 @@
 
         <section class="section s2">
             <h1> About Me</h1>
+            <div class="about_text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum fugit sit animi beatae
+                    repudiandae sint modi voluptatum non neque distinctio, vitae aliquam natus blanditiis sunt
+                    accusantium officia itaque debitis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum fugit sit animi beatae
+                    repudiandae sint modi voluptatum non neque distinctio, vitae aliquam natus blanditiis sunt
+                    accusantium officia itaque debitis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum fugit sit animi beatae
+                    repudiandae sint modi voluptatum non neque distinctio, vitae aliquam natus blanditiis sunt
+                    accusantium officia itaque debitis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum fugit sit animi beatae
+                    repudiandae sint modi voluptatum non neque distinctio, vitae aliquam natus blanditiis sunt
+                    accusantium officia itaque debitis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum fugit sit animi beatae
+                    repudiandae sint modi voluptatum non neque distinctio, vitae aliquam natus blanditiis sunt
+                    accusantium officia itaque debitis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum fugit sit animi beatae
+                    repudiandae sint modi voluptatum non neque distinctio, vitae aliquam natus blanditiis sunt
+                    accusantium officia itaque debitis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum fugit sit animi beatae
+                    repudiandae sint modi voluptatum non neque distinctio, vitae aliquam natus blanditiis sunt
+                    accusantium officia itaque debitis.
+                </p>
+            </div>
+            <div class="picture_of_me"><img src="images/heic1501a.jpg" width="600"></div>
             <div class="sidebar">
                 <div class="social-links">
                     <a href="https://github.com/MauriceKuenicke" target="_blank">
@@ -80,28 +105,37 @@
         </section>
 
         <section class="section s3">
-            <h1>My Projects</h1>
+            <div class="blurrer" id="blur">
+                <h1>My Projects</h1>
 
-            <div class="project_row">
-                <div id="column1">
-                    <img src="images/java.png" draggable="false">
-                    <img src="images/heic1501a.jpg" draggable="false">
-                </div>
-                <div id="column2">
-                    <img src="images/java.png" draggable="false">
-                    <img src="images/java.png" draggable="false">
+                <div class="project_row">
+                    <div id="column1">
+                        <a href="#" onclick="toggle(this)" data-id="popup_11"><img src="images/java.png"
+                                draggable="false"></a>
+                        <a href="#" onclick="toggle(this)" data-id="popup_12"><img src="images/heic1501a.jpg"
+                                draggable="false"></a>
+                    </div>
+                    <div id="column2">
+                        <a href="#" onclick="toggle(this)" data-id="popup_21"><img src="images/java.png"
+                                draggable="false"></a>
+                        <a href="#" onclick="toggle(this)" data-id="popup_22"><img src="images/java.png"
+                                draggable="false"></a>
 
-                </div>
-                <div id="column3">
-                    <img src="images/java.png" draggable="false">
-                    <img src="images/java.png" draggable="false">
-                </div>
-                <div id="column4">
-                    <img src="images/java.png" draggable="false">
-                    <img src="images/java.png" draggable="false">
+                    </div>
+                    <div id="column3">
+                        <a href="#" onclick="toggle(this)" data-id="popup_31"><img src="images/java.png"
+                                draggable="false"></a>
+                        <a href="#" onclick="toggle(this)" data-id="popup_32"><img src="images/java.png"
+                                draggable="false"></a>
+                    </div>
+                    <div id="column4">
+                        <a href="#" onclick="toggle(this)" data-id="popup_41"><img src="images/java.png"
+                                draggable="false"></a>
+                        <a href="#" onclick="toggle(this)" data-id="popup_42"><img src="images/java.png"
+                                draggable="false"></a>
+                    </div>
                 </div>
             </div>
-
             <div class="sidebar">
                 <div class="social-links">
                     <a href="https://github.com/MauriceKuenicke" target="_blank">
@@ -113,7 +147,18 @@
                     <img src="images/info.png">
                     <img src="images/share.png">
                 </div>
+            </div>
+
+
+            <div id="popup">
+
+            </div>
         </section>
+
+
+
+
+
         <section class="section s4">
             <h1>My Blog</h1>
             <div class="sidebar">

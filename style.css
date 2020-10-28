@@ -22,17 +22,43 @@ body{
     z-index: -2;
 }
 
+.blurrer#blur.active{
+    filter: blur(3px);
+    pointer-events:none;
+}
+
+
 .s4 {
     background: rgb(0, 0, 0);
     z-index: -2;
 }
 
+.about_text{
+    max-width: 50%;
+    max-height: 100%;
+}
+
+.about_text p{
+    color: rgb(255, 255, 255);
+    padding-left: 4rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.picture_of_me{
+    position: absolute;
+    top: 20%;
+    right: 40%;
+    width: 0px;
+}
 
 
 h1, h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     margin: 0.4rem;
+    padding-left: 2rem;
 }
 
 h1 {
@@ -131,6 +157,7 @@ h2 {
     border-radius: 20px;
     outline: none;
     cursor: pointer;
+    text-decoration: none;
   }
 
   .btn:hover {
@@ -143,7 +170,7 @@ h2 {
 .row{
     position: relative;
     top: -35%;
-    left: 3%;
+    left: 4%;
 }
 
 
@@ -189,4 +216,53 @@ h2 {
 
 .project_row img:hover{
     filter: grayscale(0%);
+}
+
+
+#popup{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgb(39, 39, 39);
+    background: rgb(148, 148, 148);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#popup a{
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#popup a:hover{
+    background: rgb(26, 26, 26);
+}
+
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s; 
+}
+
+#popup h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin: 0rem;
+    padding-left: 0rem;
+    color: black;
+    background-color: rgb(88, 88, 88);
+}
+
+#popup p{
+    margin-top: 1rem;
 }
