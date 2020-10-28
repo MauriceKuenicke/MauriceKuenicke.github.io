@@ -87,49 +87,71 @@ function toggle(d) {
     }
 }
 
-//document.body.addEventListener('click', blur_off, true);
-//function blur_off() {
-//    var popup = document.getElementById("popup");
-//    var blur = document.getElementById("blur");
-//    if (popup.classList.contains('active')) {
-//        popup.classList.toggle('active');
-//        blur.classList.toggle('active');
-//    }
-//}
-
 function get_popup_data(dataid) {
 
     if (dataid == "popup_11") {
+        var src_active = "True"
         var src_link = `https://github.com/`;
         var imgsrc = "images/java.png";
         var header = "This is the Java Tile";
+        var code_info = generate_code_divs(["Test1", "Test2"]);
         var content = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
-    molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
-    beatae illo repellendus maxime dicta atque aperiam?`;
+        molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
+        beatae illo repellendus maxime dicta atque aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
+        molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
+        beatae illo repellendus maxime dicta atque aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
+        molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
+        beatae illo repellendus maxime dicta atque aperiam?`;
     }
     else if (dataid == "popup_12") {
+        var src_active = "True"
         var src_link = `https://github.com/`;
         var imgsrc = "images/heic1501a.jpg";
         var header = "Here are the Pillars";
+        var code_info = generate_code_divs(["Test1", "Test2"]);
         var content = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
+    molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
+    beatae illo repellendus maxime dicta atque aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
+    molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
+    beatae illo repellendus maxime dicta atque aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
     molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
     beatae illo repellendus maxime dicta atque aperiam?`;
     }
     else {
+        var src_active = "False"
         var src_link = `https://github.com/`;
         var imgsrc = "images/kappa.png";
         var header = "Something went wrong here... " + dataid;
+        var code_info = generate_code_divs(["Test1", "Test2"]);
         var content = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit, natus, provident
     molestias rerum voluptatibus expedita culpa voluptate ipsa tempore alias sint quis
     beatae illo repellendus maxime dicta atque aperiam?`;
     }
 
+    if (src_active == "True") {
+        var src_link_btn = `<a href=${src_link} target="_blank" class="down_button">View Code <img src="images/src.png" height=13px
+            style="filter: invert(1)"></a>`
+    }
+    else if (src_active == "False") {
+        var src_link_btn = `<a href=${src_link} target="_blank" class="down_button disableClick">View Code <img src="images/src.png" height=13px
+            style="filter: invert(1)"></a>`
+    }
 
     var data = `<h2>${header}</h2>
+    <div class="code_info">${code_info}</div>
     <div><img src=${imgsrc} style="max-width: 100%; margin-top:10px"></div>
     <p>${content}</p>
-    <a href="#" onclick="toggle(this)">Close</a>
-    <a href=${src_link} target="_blank">View Code <img src="images/src.png" height=13px
-            style="filter: invert(1);"></a>`;
+    <a href="#" onclick="toggle(this)" class="down_button">Close</a>
+    ${src_link_btn}`
     return data;
+}
+
+function generate_code_divs(string_array) {
+    var array_length = string_array.length;
+    var div_string = "";
+    for (var i = 0; i < array_length; i++) {
+        div_string = div_string.concat(`<div class="code_sub">${string_array[i]}</div>`)
+        console.log(div_string);
+    }
+    return div_string
 }

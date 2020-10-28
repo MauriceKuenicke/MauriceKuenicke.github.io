@@ -227,13 +227,13 @@ h2 {
     width: 600px;
     padding: 50px;
     box-shadow: 0 5px 30px rgb(39, 39, 39);
-    background: rgb(148, 148, 148);
+    background: linear-gradient(to bottom, #8f8f8f 0%, #5d5d5d 100%);
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
 }
 
-#popup a{
+#popup .down_button{
     padding: 5px 20px;
     display: inline-block;
     margin-top: 20px;
@@ -243,7 +243,7 @@ h2 {
     text-decoration: none;
 }
 
-#popup a:hover{
+#popup .down_button:hover{
     background: rgb(26, 26, 26);
 }
 
@@ -254,15 +254,53 @@ h2 {
     transition: 0.5s; 
 }
 
+#popup .disableClick{
+    pointer-events: none;
+    background: rgb(36, 36, 36);
+}
+
+
+
 #popup h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     margin: 0rem;
     padding-left: 0rem;
     color: black;
-    background-color: rgb(88, 88, 88);
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 #popup p{
     margin-top: 1rem;
+}
+
+.code_info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top:10px;
+    padding-left: 10px;
+}
+
+.code_info .code_sub{
+    background-color: rgb(97, 97, 97);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+}
+
+.code_info .code_sub:hover{
+    color: rgb(233, 233, 233);
+    box-shadow: 0 1px 5px rgb(39, 39, 39);
+    transition: 1s;
+    text-decoration: none;
+}
+
+.code_info a{
+    text-decoration: none;
 }
